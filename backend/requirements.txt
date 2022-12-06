@@ -1,0 +1,5 @@
+//TODO requirement install on Raspberry Pi
+apt-get update & upgrade -y 
+  curl -s https://deb.nodesource.com/setup_16.x | sudo bash
+sudo apt install nodejs -y
+sudo npm install pm2 -g
