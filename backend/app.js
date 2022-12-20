@@ -10,10 +10,12 @@ const usersRouter = require('./routes/users');
 const deviceRouter = require('./routes/device.routes');
 
 const app = express();
-const corsOption = {
-  origin: ['http://localhost:3000'],
-};
-app.use(cors(corsOption));
+app.use(
+  cors({
+    origin: "*",
+    credentials: true
+  })
+);
 
 
 app.use(logger('dev'));
