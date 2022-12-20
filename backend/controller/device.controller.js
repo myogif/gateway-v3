@@ -36,18 +36,18 @@ exports.getDevice = async (req, res) => {
     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     let yyyy = today.getFullYear();
     today = `${dd}-${mm}-${yyyy}`;
-    const network = os.networkInterfaces().eth0
+    const network = os.networkInterfaces().eth0[0] 
 
  
 
     
     const result = {
-      mac : MacAddress || null,
-      localtime: new Date().toISOString(),
-      uptime : parsetoHHMMSS(uptime) ,
-      free_memory: free_memory,
-      memory_usage: memory_usage,
-      service_access: data.mode
+      Mac : MacAddress || null,
+      Localtime: new Date().toISOString(),
+      Uptime : parsetoHHMMSS(uptime) ,
+      Free_memory: free_memory,
+      Memory_Usage: memory_usage,
+      Service_Access: data.mode
       // device: getDevice,
     } 
     // const network = {
