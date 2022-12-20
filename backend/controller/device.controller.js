@@ -42,7 +42,6 @@ exports.getDevice = async (req, res) => {
 
     
     const result = {
-      Mac : MacAddress || null,
       Localtime: new Date().toISOString(),
       Uptime : parsetoHHMMSS(uptime) ,
       Free_memory: free_memory,
